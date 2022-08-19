@@ -46,3 +46,36 @@ function division(a, b) {
 function percent(a, b) {
   return a * (b / 100);
 }
+
+function operate(a, b, c) {
+  let output = 0;
+
+  try {
+    switch (c) {
+      case "+":
+        output = a + b;
+        break;
+
+      case "*":
+        output = a * b;
+        break;
+
+      case "-":
+        output = a - b;
+        break;
+
+      case "/":
+        if (b === 0) {
+          throw "Cant divide with 0!";
+        } else {
+          output = a / b;
+        }
+        break;
+    }
+  } catch (e) {
+    console.log("There's an error"), e;
+  }
+
+  return output;
+}
+console.log(operate(25, 4, "+"));
