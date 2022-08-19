@@ -7,19 +7,15 @@ const clearBtn = document.getElementById("ac");
 const changeSign = document.getElementById("plus-minus");
 const operators = document.querySelectorAll(".operator");
 
-let operator;
-let num = 0;
-let firstNum = "";
-let secondNum = "";
-let value;
-let firstNumTurn = true;
-let secondNumTurn = false;
-let decimalAllowed = true;
-let previousDigit = "";
-
 // Events
 
+console.log(numbers);
+(clearBtn.addEventListener = "click"), clear;
 // Functions
+
+function clear() {
+  content.textContent = "";
+}
 
 function addition(a, b) {
   return a + b;
