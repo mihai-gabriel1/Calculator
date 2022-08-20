@@ -1,6 +1,6 @@
 // Variables
 
-let content = document.querySelector("content");
+const content = document.querySelector("#content");
 const numbers = document.querySelectorAll(".num");
 const equalsBtn = document.getElementById("equals");
 const clearBtn = document.getElementById("ac");
@@ -9,8 +9,6 @@ const operators = document.querySelectorAll(".operator");
 
 // Events
 
-console.log(numbers);
-(clearBtn.addEventListener = "click"), clear;
 // Functions
 
 function clear() {
@@ -75,3 +73,10 @@ function operate(a, b, c) {
   return output;
 }
 console.log(operate(25, 4, "+"));
+
+const digits = document.getElementsByClassName("digit");
+for (let i = 0; i < digits.length; i++) {
+  digits[i].addEventListener("click", function (e) {
+    content.textContent = e.currentTarget.value;
+  });
+}
