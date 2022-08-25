@@ -6,15 +6,14 @@ const equalsBtn = document.getElementById("equals");
 const clearBtn = document.getElementById("ac");
 const changeSign = document.getElementById("plus-minus");
 const operators = document.querySelectorAll(".operator");
-
+const acReset = document.querySelector(".ac");
 // Events
 
+acReset.addEventListener("click", () => {
+  location.reload();
+});
+
 // Functions
-
-function clear() {
-  content.textContent = "";
-}
-
 function addition(a, b) {
   return a + b;
 }
@@ -77,6 +76,7 @@ console.log(operate(25, 4, "+"));
 const digits = document.getElementsByClassName("digit");
 for (let i = 0; i < digits.length; i++) {
   digits[i].addEventListener("click", function (e) {
-    content.textContent = e.currentTarget.value;
+    content.textContent =
+      parseInt(content.textContent) * 10 + parseInt(e.currentTarget.value);
   });
 }
